@@ -1,13 +1,15 @@
 <script>
+  import SiteHeader from "./components/common/SiteHeader.svelte";
   import PostPreviewCard1 from "./components/post-preview/PostPreviewCard1.svelte";
   import PostPreviewCard2 from "./components/post-preview/PostPreviewCard2.svelte";
+  import PostPreviewCard3 from "./components/post-preview/PostPreviewCard3.svelte";
   export let name;
   let posts = [
     {
       title: "The Joy of Petty Grievances in Death Becomes Her",
       description:
         "Whoever said “It’s not about the destination. It’s the journey” never flew on a long haul flight. Those flights can be painful, tiresome, ...",
-      url: '/post-url',
+      url: "/post-url",
       author: {
         name: "bkninja",
         url: "/author",
@@ -30,7 +32,7 @@
       title: "The Joy of Petty Grievances in Death Becomes Her1",
       description:
         "Whoever said “It’s not about the destination. It’s the journey” never flew on a long haul flight. Those flights can be painful, tiresome, ...",
-      url: '/post-url',
+      url: "/post-url",
       author: {
         name: "bkninja",
         url: "/author",
@@ -55,7 +57,7 @@
       title: "The Joy of Petty Grievances in Death Becomes Her2",
       description:
         "Whoever said “It’s not about the destination. It’s the journey” never flew on a long haul flight. Those flights can be painful, tiresome, ...",
-      url: '/post-url',
+      url: "/post-url",
       author: {
         name: "bkninja",
         url: "/author",
@@ -80,7 +82,7 @@
       title: "The Joy of Petty Grievances in Death Becomes Her3",
       description:
         "Whoever said “It’s not about the destination. It’s the journey” never flew on a long haul flight. Those flights can be painful, tiresome, ...",
-      url: '/post-url',
+      url: "/post-url",
       author: {
         name: "bkninja",
         url: "/author",
@@ -137,6 +139,7 @@
   }
 </style>
 
+<SiteHeader />
 <main>
   <h1>Hello {name}!</h1>
   <p>
@@ -146,12 +149,17 @@
 
   <section class="posts-1 -mosaic">
     {#each posts as post}
-      <PostPreviewCard1 {...post}/>
+      <PostPreviewCard1 {...post} />
     {/each}
   </section>
   <section class="posts-2">
     {#each posts as post}
-      <PostPreviewCard2 {...post}/>
+      <PostPreviewCard2 {...post} />
+    {/each}
+  </section>
+  <section class="posts-3">
+    {#each posts as post}
+      <PostPreviewCard3 {...post} />
     {/each}
   </section>
 </main>

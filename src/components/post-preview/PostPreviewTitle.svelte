@@ -6,11 +6,12 @@
 
 <style>
   .post-title {
-    font-size: 27px;
+    font-size: var(--post-title-size);
     color: var(--post-title-color);
+    font-weight: var(--post-title-weight);
     line-height: 1.5;
 
-    margin: 0 0 15px 0;
+    margin: var(--post-title-margin);
   }
   .post-title a {
     color: inherit;

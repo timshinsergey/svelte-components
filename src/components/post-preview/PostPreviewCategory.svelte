@@ -27,6 +27,13 @@
     left: 20px;
     z-index: 1;
   }
+  .post-cat.-on-thumb {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 0;
+  }
 </style>
 
-<a href="{url}" class="post-cat {classes}">{name}</a>
+<a href={url} class="post-cat {classes}">{name}</a>

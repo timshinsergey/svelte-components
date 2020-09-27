@@ -19,6 +19,7 @@
     --post-title-color: #fff;
     --post-author-color: hsla(0, 0%, 100%, 0.85);
     --post-date-color: hsla(0, 0%, 100%, 0.85);
+    --post-thumb-margin: 0;
 
     display: flex;
     align-items: flex-end;
@@ -27,6 +28,7 @@
   }
   .post-text {
     padding: 25px 20px;
+    width: 100%;
   }
   .post-text:before {
     content: "";

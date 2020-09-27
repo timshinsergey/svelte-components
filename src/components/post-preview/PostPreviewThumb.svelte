@@ -1,7 +1,10 @@
 <script>
+  import PostPreviewCategory from "./PostPreviewCategory.svelte";
+
   export let classes;
   export let img;
   export let url;
+  export let firstCategory;
   export let imgAlt = "";
 </script>
 
@@ -11,15 +14,15 @@
     margin: var(--post-thumb-margin);
   }
   .post-thumb:before {
-    content: '';
+    content: "";
     display: block;
-    padding-top: 70%;
+    padding-top: var(--post-thumb-resolution);
   }
   .post-thumb img {
     position: absolute;
     top: 0;
     left: 0;
-    
+
     width: 100%;
     height: 100%;
   }
@@ -53,6 +56,10 @@
 
 <div class="post-thumb {classes}">
   {#if url}
-    <a href={url}> <picture> <img src={img} alt="{imgAlt}" /> </picture> </a>
-  {:else}<picture> <img src={img} alt="{imgAlt}" /> </picture>{/if}
+    <a href={url}> <picture> <img src={img} alt={imgAlt} /> </picture> </a>
+  {:else}<picture> <img src={img} alt={imgAlt} /> </picture>{/if}
+
+  {#if firstCategory}
+    <PostPreviewCategory {...firstCategory} classes="-on-thumb" />
+  {/if}
 </div>
